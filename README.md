@@ -45,7 +45,7 @@ Run `npx create-zolt@latest --help` for every flag. Existing files are never ove
 
 ### The generated CLI
 
-Every generated project installs `@zolt/cli`, so nothing global is required. Use `npx zolt <command>`, `npm run <script>`, or `pnpm zolt <command>` — those always resolve the local binary. A bare `zolt` works only if `node_modules/.bin` is on your shell's `PATH`.
+Every generated project installs `@zolt-framework/cli`, so nothing global is required. Use `npx zolt <command>`, `npm run <script>`, or `pnpm zolt <command>` — those always resolve the local binary. A bare `zolt` works only if `node_modules/.bin` is on your shell's `PATH`.
 
 ```bash
 zolt dev          # start the dev server
@@ -65,7 +65,7 @@ zolt list          # list available templates
 - Local authentication (Argon2id) plus environment-configured Asgardeo, Keycloak, or generic OIDC
 - Mandatory tenant-aware authorization helpers, tenant-bound password/encryption primitives
 - AES-256-GCM, HMAC-SHA-256, safe digests, cryptographic random tokens
-- `@zolt/database` — a unified client for postgres, mysql, sqlite, and mongodb with connection pooling, retries, transactions, and a migration runner, wired into the Fastify runtime (see [docs/database.md](docs/database.md))
+- `@zolt-framework/database` — a unified client for postgres, mysql, sqlite, and mongodb with connection pooling, retries, transactions, and a migration runner, wired into the Fastify runtime (see [docs/database.md](docs/database.md))
 - Validated local/S3/GCS/Azure storage and SMTP/SES/SendGrid/Mailgun configuration
 - Fastify 5 runtime: schema validation, OpenAPI, rate limiting, secure headers, graceful shutdown
 - React TSX via Vite 8, Tailwind (dark mode, tokens, forms, typography, focus styles, motion)
@@ -74,19 +74,19 @@ zolt list          # list available templates
 - Cross-platform CLI diagnostics, dev/build/test/serve, Postman collection generation
 - Clean npm tarballs, validated against a real external install (see [Testing](#testing) below)
 
-Planned, not yet shipped: an ORM/schema layer, a component library, a complete authentication/session adapter, and true SSR. See [docs/orm.md](docs/orm.md) for the current boundary between `@zolt/database` (shipped) and an ORM (not shipped).
+Planned, not yet shipped: an ORM/schema layer, a component library, a complete authentication/session adapter, and true SSR. See [docs/orm.md](docs/orm.md) for the current boundary between `@zolt-framework/database` (shipped) and an ORM (not shipped).
 
 ## Repository layout
 
 ```
 packages/
-  core/       @zolt/core       — config types, defineConfig(), Postman collection generation
-  config/     @zolt/config     — validated environment/service configuration loader
-  security/   @zolt/security   — AES-256-GCM, HMAC, digests, token generation
-  auth/       @zolt/auth       — Argon2id hashing, OIDC provider configuration, tenant authorization
-  database/   @zolt/database   — postgres/mysql/sqlite/mongodb client, pooling, transactions, migrations
-  http/       @zolt/http       — Fastify application runtime
-  cli/        @zolt/cli        — the `zolt` command (dev/build/test/doctor/env/postman)
+  core/       @zolt-framework/core       — config types, defineConfig(), Postman collection generation
+  config/     @zolt-framework/config     — validated environment/service configuration loader
+  security/   @zolt-framework/security   — AES-256-GCM, HMAC, digests, token generation
+  auth/       @zolt-framework/auth       — Argon2id hashing, OIDC provider configuration, tenant authorization
+  database/   @zolt-framework/database   — postgres/mysql/sqlite/mongodb client, pooling, transactions, migrations
+  http/       @zolt-framework/http       — Fastify application runtime
+  cli/        @zolt-framework/cli        — the `zolt` command (dev/build/test/doctor/env/postman)
 create-zolt/                   — the `create-zolt` scaffolder (npx entry point)
 templates/                       — atlas / api / ssr / minimal project templates the scaffolder copies from
 examples/                        — example applications
@@ -125,7 +125,7 @@ To work on a single package, `cd packages/<name>` and run its own `build`/`test`
 
 Unit tests (`pnpm test`) run everywhere with no external dependencies — they're what CI runs on every push and PR, across Linux/Windows/macOS and Node 22/24.
 
-`@zolt/database` additionally ships real integration tests against actual postgres, mysql, and mongodb containers (not mocks): transactions, rollbacks, retries, and migrations are verified against real servers. Run them with Docker running locally:
+`@zolt-framework/database` additionally ships real integration tests against actual postgres, mysql, and mongodb containers (not mocks): transactions, rollbacks, retries, and migrations are verified against real servers. Run them with Docker running locally:
 
 ```bash
 cd packages/database

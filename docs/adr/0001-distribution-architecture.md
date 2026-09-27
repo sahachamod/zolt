@@ -11,12 +11,12 @@ This repository began as an empty workspace. Zolt therefore needs a small, testa
 
 Zolt is a pnpm workspace with seven publishable packages:
 
-- `@zolt/core` owns public configuration types and `defineConfig`.
-- `@zolt/auth` owns Argon2id password primitives and environment-driven OIDC provider configuration.
-- `@zolt/config` validates tenant, storage, mail, and cryptography environment settings.
-- `@zolt/security` owns tenant-bound AES-256-GCM, HMAC, digests, and secure-token primitives.
-- `@zolt/http` owns the Fastify application runtime, security defaults, OpenAPI, static delivery, and tenant-protected route registration.
-- `@zolt/cli` owns the portable `zolt` executable and lifecycle commands.
+- `@zolt-framework/core` owns public configuration types and `defineConfig`.
+- `@zolt-framework/auth` owns Argon2id password primitives and environment-driven OIDC provider configuration.
+- `@zolt-framework/config` validates tenant, storage, mail, and cryptography environment settings.
+- `@zolt-framework/security` owns tenant-bound AES-256-GCM, HMAC, digests, and secure-token primitives.
+- `@zolt-framework/http` owns the Fastify application runtime, security defaults, OpenAPI, static delivery, and tenant-protected route registration.
+- `@zolt-framework/cli` owns the portable `zolt` executable and lifecycle commands.
 - `create-zolt` owns project prompts, safe template copying, option transforms, dependency installation, and optional Git initialization.
 
 The source templates live in `/templates`. The creator build copies them into `dist/templates`, making the npm tarball self-contained. A generated project never reads the Zolt repository or a GitHub checkout.

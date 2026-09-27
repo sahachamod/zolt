@@ -1,5 +1,5 @@
 {
-  "name": "@zolt/security",
+  "name": "@zolt-framework/security",
   "version": "0.1.0",
   "description": "Tenant-bound cryptography primitives for Zolt",
   "type": "module",

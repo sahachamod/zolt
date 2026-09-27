@@ -1,9 +1,9 @@
-# @zolt/database
+# @zolt-framework/database
 
 A unified database client for Zolt applications. One factory, four drivers.
 
 ```ts
-import { createDatabaseClient, isSqlClient } from "@zolt/database";
+import { createDatabaseClient, isSqlClient } from "@zolt-framework/database";
 
 const db = await createDatabaseClient({
   driver: "postgres",
@@ -32,7 +32,7 @@ The transaction commits if the callback resolves and rolls back automatically if
 ## Migrations
 
 ```ts
-import { runMigrations } from "@zolt/database";
+import { runMigrations } from "@zolt-framework/database";
 
 await runMigrations(db, [
   { id: "001_create_users", up: async (client) => { await client.execute("CREATE TABLE users (id SERIAL PRIMARY KEY, email TEXT NOT NULL)"); } }

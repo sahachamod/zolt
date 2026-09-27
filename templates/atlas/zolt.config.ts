@@ -1,4 +1,4 @@
-import { defineConfig } from "@zolt/core";
+import { defineConfig } from "@zolt-framework/core";
 
 export default defineConfig({
   app: { name: "__PROJECT_NAME__", environment: "development" },

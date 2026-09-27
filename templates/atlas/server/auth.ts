@@ -1,4 +1,4 @@
-import { authConfigFromEnv, authorizeTenant, hashTenantPassword, verifyTenantPassword, type AuthenticatedPrincipal } from "@zolt/auth";
+import { authConfigFromEnv, authorizeTenant, hashTenantPassword, verifyTenantPassword, type AuthenticatedPrincipal } from "@zolt-framework/auth";
 import { services } from "../config/services.js";
 
 export const auth = authConfigFromEnv();

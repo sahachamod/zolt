@@ -27,8 +27,8 @@ test("all template overlays generate self-contained projects and dot is supporte
       assert.equal(result.status, 0, result.stderr);
       const manifest = JSON.parse(await readFile(path.join(temporary, template, "package.json"), "utf8"));
       assert.equal(manifest.name, template);
-      assert.equal(manifest.devDependencies["@zolt/cli"], "^0.1.0");
-      assert.equal(manifest.dependencies["@zolt/http"], "^0.1.0");
+      assert.equal(manifest.devDependencies["@zolt-framework/cli"], "^0.1.0");
+      assert.equal(manifest.dependencies["@zolt-framework/http"], "^0.1.0");
       if (template === "api") {
         const collection = JSON.parse(await readFile(path.join(temporary, template, "postman", "api.postman_collection.json"), "utf8"));
         assert.match(collection.info.schema, /v2\.1\.0/);

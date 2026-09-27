@@ -1,5 +1,5 @@
 {
-  "name": "@zolt/http",
+  "name": "@zolt-framework/http",
   "version": "0.1.0",
   "description": "Secure Fastify runtime for Zolt applications",
   "type": "module",
@@ -24,8 +24,8 @@
     "@fastify/rate-limit": "^11.2.0",
     "@fastify/static": "^10.1.4",
     "@fastify/swagger": "^9.9.0",
-    "@zolt/auth": "workspace:^",
-    "@zolt/database": "workspace:^",
+    "@zolt-framework/auth": "workspace:^",
+    "@zolt-framework/database": "workspace:^",
     "fastify": "^5.12.5"
   },
   "publishConfig": { "access": "public", "provenance": false }

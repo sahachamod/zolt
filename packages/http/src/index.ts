@@ -2,8 +2,8 @@ import fastifyStatic from "@fastify/static";
 import helmet from "@fastify/helmet";
 import rateLimit from "@fastify/rate-limit";
 import swagger from "@fastify/swagger";
-import { authorizeTenant, type AuthenticatedPrincipal } from "@zolt/auth";
-import type { DatabaseClient } from "@zolt/database";
+import { authorizeTenant, type AuthenticatedPrincipal } from "@zolt-framework/auth";
+import type { DatabaseClient } from "@zolt-framework/database";
 import Fastify, {
   type FastifyInstance,
   type FastifyReply,

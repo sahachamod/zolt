@@ -17,7 +17,7 @@ importers:
 
   create-zolt:
     dependencies:
-      '@zolt/core':
+      '@zolt-framework/core':
         specifier: workspace:^
         version: link:../packages/core
 
@@ -29,16 +29,16 @@ importers:
 
   packages/cli:
     dependencies:
-      '@zolt/auth':
+      '@zolt-framework/auth':
         specifier: workspace:^
         version: link:../auth
-      '@zolt/config':
+      '@zolt-framework/config':
         specifier: workspace:^
         version: link:../config
-      '@zolt/core':
+      '@zolt-framework/core':
         specifier: workspace:^
         version: link:../core
-      '@zolt/security':
+      '@zolt-framework/security':
         specifier: workspace:^
         version: link:../security
       create-zolt:
@@ -81,10 +81,10 @@ importers:
       '@fastify/swagger':
         specifier: ^9.9.0
         version: 9.9.0
-      '@zolt/auth':
+      '@zolt-framework/auth':
         specifier: workspace:^
         version: link:../auth
-      '@zolt/database':
+      '@zolt-framework/database':
         specifier: workspace:^
         version: link:../database
       fastify:

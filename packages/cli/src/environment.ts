@@ -1,9 +1,9 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { loadEnvFile } from "node:process";
-import { authConfigFromEnv, publicAuthConfig } from "@zolt/auth";
-import { loadServiceConfig, serviceConfigSummary } from "@zolt/config";
-import { generateEncryptionKey, randomToken } from "@zolt/security";
+import { authConfigFromEnv, publicAuthConfig } from "@zolt-framework/auth";
+import { loadServiceConfig, serviceConfigSummary } from "@zolt-framework/config";
+import { generateEncryptionKey, randomToken } from "@zolt-framework/security";
 
 function replaceBlank(contents: string, name: string, value: string): { contents: string; changed: boolean } {
   const pattern = new RegExp(`^${name}=\\s*$`, "m");

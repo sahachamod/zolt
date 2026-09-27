@@ -24,7 +24,7 @@ export default function HomePage() {
         <AuthPanel
           provider={provider}
           onLocalSubmit={({ mode }) => setNotice(`Connect ${mode} to your user repository using server/auth.ts. Credentials were not stored in this browser preview.`)}
-          onExternalSubmit={(selected) => setNotice(`Connect the ${selected} button to your server authorization route. OIDC helpers are ready in @zolt/auth.`)}
+          onExternalSubmit={(selected) => setNotice(`Connect the ${selected} button to your server authorization route. OIDC helpers are ready in @zolt-framework/auth.`)}
         />
       </div>
     </main>

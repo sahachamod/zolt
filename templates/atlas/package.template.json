@@ -13,17 +13,17 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@zolt/auth": "^0.1.0",
-    "@zolt/config": "^0.1.0",
-    "@zolt/core": "^0.1.0",
-    "@zolt/database": "^0.1.0",
-    "@zolt/http": "^0.1.0",
-    "@zolt/security": "^0.1.0",
+    "@zolt-framework/auth": "^0.1.0",
+    "@zolt-framework/config": "^0.1.0",
+    "@zolt-framework/core": "^0.1.0",
+    "@zolt-framework/database": "^0.1.0",
+    "@zolt-framework/http": "^0.1.0",
+    "@zolt-framework/security": "^0.1.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
-    "@zolt/cli": "^0.1.0",
+    "@zolt-framework/cli": "^0.1.0",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.15.0",

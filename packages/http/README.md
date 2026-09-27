@@ -1,9 +1,9 @@
-# @zolt/http
+# @zolt-framework/http
 
 The production HTTP runtime for Zolt. It provides Fastify 5, secure headers, request IDs, JSON-schema validation, OpenAPI 3.1 generation, rate limiting, static application serving, and tenant-authorized route helpers.
 
 ```ts
-import { createZoltServer } from "@zolt/http";
+import { createZoltServer } from "@zolt-framework/http";
 
 const app = await createZoltServer({ name: "example" });
 await app.listen({ host: "127.0.0.1", port: 3000 });

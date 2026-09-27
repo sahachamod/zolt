@@ -1,5 +1,5 @@
 {
-  "name": "@zolt/cli",
+  "name": "@zolt-framework/cli",
   "version": "0.1.0",
   "description": "The Zolt project command-line interface",
   "type": "module",
@@ -14,10 +14,10 @@
   },
   "files": ["dist", "README.md", "LICENSE"],
   "dependencies": {
-    "@zolt/auth": "workspace:^",
-    "@zolt/config": "workspace:^",
-    "@zolt/core": "workspace:^",
-    "@zolt/security": "workspace:^",
+    "@zolt-framework/auth": "workspace:^",
+    "@zolt-framework/config": "workspace:^",
+    "@zolt-framework/core": "workspace:^",
+    "@zolt-framework/security": "workspace:^",
     "create-zolt": "workspace:^",
     "jiti": "^2.5.1"
   },

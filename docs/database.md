@@ -1,6 +1,6 @@
 # Database
 
-`@zolt/database` provides a unified client across four drivers: `postgres` (via `pg`), `mysql` (via `mysql2`), `sqlite` (via Node's built-in `node:sqlite`, no install needed), and `mongodb` (via `mongodb`).
+`@zolt-framework/database` provides a unified client across four drivers: `postgres` (via `pg`), `mysql` (via `mysql2`), `sqlite` (via Node's built-in `node:sqlite`, no install needed), and `mongodb` (via `mongodb`).
 
 Select a driver at creation time:
 
@@ -16,7 +16,7 @@ import { getDatabase } from "./database/client.js";
 const db = await getDatabase();
 ```
 
-`@zolt/config`'s `loadServiceConfig()` validates `DATABASE_DRIVER` and requires `DATABASE_URL` for every driver except `none` — the creator never writes credentials, so `DATABASE_URL` starts blank in `.env` and must be supplied before the app can connect.
+`@zolt-framework/config`'s `loadServiceConfig()` validates `DATABASE_DRIVER` and requires `DATABASE_URL` for every driver except `none` — the creator never writes credentials, so `DATABASE_URL` starts blank in `.env` and must be supplied before the app can connect.
 
 The generated `server/index.ts` passes the resolved client into `createZoltServer({ database })`, which decorates the Fastify instance as `app.db` and closes the client automatically on server shutdown.
 

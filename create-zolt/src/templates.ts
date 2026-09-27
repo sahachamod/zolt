@@ -2,7 +2,7 @@ import { cp, mkdir, readdir, readFile, rename, rm, writeFile } from "node:fs/pro
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { CreateOptions } from "./types.js";
-import { createPostmanCollection, type RouteManifest } from "@zolt/core";
+import { createPostmanCollection, type RouteManifest } from "@zolt-framework/core";
 
 const templateRoot = fileURLToPath(new URL("./templates", import.meta.url));
 
@@ -54,7 +54,7 @@ export async function materializeTemplate(destination: string, name: string, opt
   packageTemplate.name = name;
   if (options.auth === "none") {
     const dependencies = packageTemplate.dependencies as Record<string, string>;
-    delete dependencies["@zolt/auth"];
+    delete dependencies["@zolt-framework/auth"];
     await removeIfPresent(path.join(destination, "server", "auth.ts"));
   }
   if (options.testing === "none") {

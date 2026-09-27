@@ -1,5 +1,5 @@
 {
-  "name": "@zolt/core",
+  "name": "@zolt-framework/core",
   "version": "0.1.0",
   "description": "Public configuration primitives for Zolt applications",
   "type": "module",

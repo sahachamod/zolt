@@ -1,6 +1,6 @@
 # Architecture
 
-The pnpm workspace publishes `@zolt/core`, `@zolt/config`, `@zolt/security`, `@zolt/auth`, `@zolt/http`, `@zolt/cli`, and `create-zolt`. Templates remain repository source assets and are copied into the creator's `dist/templates` during its build. Generated projects therefore have no repository dependency.
+The pnpm workspace publishes `@zolt-framework/core`, `@zolt-framework/config`, `@zolt-framework/security`, `@zolt-framework/auth`, `@zolt-framework/http`, `@zolt-framework/cli`, and `create-zolt`. Templates remain repository source assets and are copied into the creator's `dist/templates` during its build. Generated projects therefore have no repository dependency.
 
 Every generated project has an explicit default tenant. An untrusted tenant selector never grants access: applications authorize it against tenant memberships from a verified principal, then carry the resulting tenant context into database queries, cache keys, storage paths, queues, encryption, rate limits, and audit events.
 

@@ -1,5 +1,5 @@
 {
-  "name": "@zolt/auth",
+  "name": "@zolt-framework/auth",
   "version": "0.1.0",
   "description": "Argon2id password hashing and OIDC provider configuration for Zolt",
   "type": "module",

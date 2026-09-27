@@ -1,5 +1,5 @@
 {
-  "name": "@zolt/database",
+  "name": "@zolt-framework/database",
   "version": "0.1.0",
   "description": "Unified postgres, mysql, sqlite, and mongodb client for Zolt",
   "type": "module",

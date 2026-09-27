@@ -1,4 +1,4 @@
-import { createZoltServer } from "@zolt/http";
+import { createZoltServer } from "@zolt-framework/http";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";

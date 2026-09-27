@@ -1,4 +1,4 @@
-# @zolt/auth
+# @zolt-framework/auth
 
 Zolt authentication primitives:
 
@@ -9,7 +9,7 @@ Zolt authentication primitives:
 - Server-verified tenant authorization, tenant-scoped resource keys, and tenant-derived password peppers.
 
 ```ts
-import { authConfigFromEnv, hashPassword, verifyPassword } from "@zolt/auth";
+import { authConfigFromEnv, hashPassword, verifyPassword } from "@zolt-framework/auth";
 
 const auth = authConfigFromEnv();
 const digest = await hashPassword(password, { pepper: process.env.AUTH_PASSWORD_PEPPER });

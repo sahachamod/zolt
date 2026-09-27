@@ -1,4 +1,4 @@
-import { createDatabaseClient, type DatabaseClient } from "@zolt/database";
+import { createDatabaseClient, type DatabaseClient } from "@zolt-framework/database";
 import { services } from "../config/services.js";
 
 let client: Promise<DatabaseClient> | undefined;

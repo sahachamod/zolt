@@ -1,4 +1,4 @@
-# @zolt/security
+# @zolt-framework/security
 
 Auditable wrappers around Node cryptography: tenant-bound AES-256-GCM envelopes, HMAC-SHA-256, SHA-256/SHA-512 digests, and cryptographically secure random tokens. Weak or unauthenticated ciphers are intentionally not exposed.
 

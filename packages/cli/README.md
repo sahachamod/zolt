@@ -1,4 +1,4 @@
-# @zolt/cli
+# @zolt-framework/cli
 
 Project-local command line tools for Zolt.
 

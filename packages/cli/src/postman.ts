@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { createPostmanCollection, type RouteManifest } from "@zolt/core";
+import { createPostmanCollection, type RouteManifest } from "@zolt-framework/core";
 
 export async function generatePostman(cwd: string): Promise<string> {
   const project = JSON.parse(await readFile(path.join(cwd, "zolt.project.json"), "utf8")) as { template?: string };

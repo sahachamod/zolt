@@ -1,5 +1,5 @@
 {
-  "name": "@zolt/config",
+  "name": "@zolt-framework/config",
   "version": "0.1.0",
   "description": "Validated environment and service configuration for Zolt",
   "type": "module",
