@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "name": "Health check",
+      "method": "GET",
+      "path": "/api/health",
+      "description": "Returns the public Zolt application health status.",
+      "authenticated": false
+    }
+  ]
+}

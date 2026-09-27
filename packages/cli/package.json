@@ -1,0 +1,32 @@
+{
+  "name": "@zolt/cli",
+  "version": "0.1.0",
+  "description": "The Zolt project command-line interface",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "bin": { "zolt": "./dist/bin/zolt.js" },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "dependencies": {
+    "@zolt/auth": "workspace:^",
+    "@zolt/config": "workspace:^",
+    "@zolt/core": "workspace:^",
+    "@zolt/security": "workspace:^",
+    "create-zolt": "workspace:^",
+    "jiti": "^2.5.1"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test test/*.test.mjs"
+  },
+  "publishConfig": { "access": "public", "provenance": true }
+}

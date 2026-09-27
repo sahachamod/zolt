@@ -1,0 +1,3 @@
+- name: Check Node.js
+  ansible.builtin.command: node --version
+  changed_when: false

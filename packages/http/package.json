@@ -1,0 +1,32 @@
+{
+  "name": "@zolt/http",
+  "version": "0.1.0",
+  "description": "Secure Fastify runtime for Zolt applications",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@fastify/helmet": "^13.1.1",
+    "@fastify/rate-limit": "^11.2.0",
+    "@fastify/static": "^10.1.4",
+    "@fastify/swagger": "^9.9.0",
+    "@zolt/auth": "workspace:^",
+    "@zolt/database": "workspace:^",
+    "fastify": "^5.12.5"
+  },
+  "publishConfig": { "access": "public", "provenance": true }
+}

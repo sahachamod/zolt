@@ -1,0 +1,2 @@
+- name: Document Docker requirement
+  ansible.builtin.debug: { msg: "Install Docker using your platform's supported repository." }

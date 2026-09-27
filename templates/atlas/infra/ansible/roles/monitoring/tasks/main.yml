@@ -1,0 +1,2 @@
+- name: Document health endpoint
+  ansible.builtin.debug: { msg: "Monitor http://127.0.0.1:{{ zolt_port }}/" }

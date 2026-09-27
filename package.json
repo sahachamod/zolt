@@ -1,0 +1,24 @@
+{
+  "name": "zolt-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "corepack pnpm@10.17.1 -r --if-present build",
+    "clean": "corepack pnpm@10.17.1 -r --if-present clean",
+    "lint": "corepack pnpm@10.17.1 -r --if-present lint",
+    "typecheck": "corepack pnpm@10.17.1 -r --if-present typecheck",
+    "test": "corepack pnpm@10.17.1 -r --if-present test",
+    "pack": "node scripts/pack.mjs",
+    "validate:packages": "node scripts/validate-packages.mjs",
+    "security:check": "node scripts/security-check.mjs && corepack pnpm@10.17.1 audit --prod",
+    "ci": "corepack pnpm@10.17.1 lint && corepack pnpm@10.17.1 typecheck && corepack pnpm@10.17.1 test && corepack pnpm@10.17.1 build && corepack pnpm@10.17.1 validate:packages"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  }
+}

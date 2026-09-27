@@ -1,0 +1,4 @@
+- name: Configure Zolt host
+  hosts: all
+  become: true
+  roles: [common, docker, node, nginx, monitoring]
