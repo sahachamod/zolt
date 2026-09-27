@@ -31,5 +31,5 @@
     "test": "node --test test/*.test.mjs",
     "test:integration": "node --test test/integration/*.test.mjs"
   },
-  "publishConfig": { "access": "public", "provenance": true }
+  "publishConfig": { "access": "public", "provenance": false }
 }

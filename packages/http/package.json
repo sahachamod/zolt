@@ -28,5 +28,5 @@
     "@zolt/database": "workspace:^",
     "fastify": "^5.12.5"
   },
-  "publishConfig": { "access": "public", "provenance": true }
+  "publishConfig": { "access": "public", "provenance": false }
 }
